@@ -6,6 +6,9 @@
   - name: Print debug message
     debug:
       msg: Hello, world!
+  - name: Dump environment
+    ansible.builtin.command:
+      cmd: env | sort
   - name: Sleep
     ansible.builtin.pause:
       minutes: 10
