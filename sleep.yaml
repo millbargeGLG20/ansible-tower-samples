@@ -7,8 +7,10 @@
     debug:
       msg: Hello, world!
   - name: Dump environment
-    ansible.builtin.command:
-      cmd: env | sort
+    ansible.builtin.shell:
+      cmd: |
+        echo $AWS_CONFIG
+        cat $AWS_CONFIG
   - name: Sleep
     ansible.builtin.pause:
       minutes: 10
