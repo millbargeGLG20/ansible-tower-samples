@@ -6,6 +6,11 @@
   - name: Print debug message
     debug:
       msg: Hello, world!
+  - name: Shell port test
+    ansible.builtin.shell:
+      cmd: |
+        timeout 3 bash -c 'cat </dev/null >/dev/tcp/route53.amazonaws.com/443
+        echo $?
   - name: Test Route53
     ansible.builtin.uri:
       url: https://route53.amazonaws.com
