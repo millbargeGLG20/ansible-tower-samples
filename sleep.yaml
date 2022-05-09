@@ -6,6 +6,9 @@
   - name: Print debug message
     debug:
       msg: Hello, world!
+  - name: Sleep
+    ansible.builtin.pause:
+      minutes: 3
   - name: Shell port test
     ansible.builtin.shell:
       cmd: |
