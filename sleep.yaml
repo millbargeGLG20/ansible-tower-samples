@@ -6,6 +6,9 @@
   - name: Print debug message
     debug:
       msg: Hello, world!
+  - name: Test Route53
+    ansible.builtin.uri:
+      url: https://route53.amazonaws.com
   - name: Dump environment
     ansible.builtin.shell:
       cmd: |
