@@ -1,0 +1,8 @@
+---
+# This playbook prints a simple debug message
+- name: Echo 
+  hosts: all
+  tasks:
+  - name: Sleep
+    ansible.builtin.pause:
+      minutes: 5
