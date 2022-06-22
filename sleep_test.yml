@@ -6,7 +6,7 @@
   hosts: all
   gather_facts: false
   vars:
-    sleep_interval: 5
+    sleep_interval: 300
 
   tasks:
     - name: sleep for a specified interval
